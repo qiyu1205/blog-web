@@ -18,16 +18,13 @@ commit 提交使用以下 type 描述：
 ## 项目结构概览
 |-- blog-web
     |-- components                                  #公共组件
-    |   |-- date.tsx 
-    |   |-- layout.module.css
-    |   |-- layout.tsx
     |-- lib                                         #库
-    |   |-- posts.js                                #文章数据解析生成
+    |   |-- posts.js                                #文章数据解析生成方法
     |-- pages
     |   |-- _app.tsx
     |   |-- index.tsx                               #首页
     |   |-- posts
-    |       |-- [id].tsx                            #博客文章页
+    |       |-- [id].tsx                            #文章详情页
     |-- posts                                       #以 .md 结尾的 markdown 文件列表
     |   |-- pre-rendering.md
     |   |-- ssg-ssr.md
@@ -38,7 +35,6 @@ commit 提交使用以下 type 描述：
     |       |-- profile.jpg
     |-- styles                                      #公共样式
         |-- global.css
-        |-- utils.module.css
     |-- .gitignore
     |-- README.md
     |-- development.md                              #开发文档
