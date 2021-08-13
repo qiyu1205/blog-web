@@ -6,7 +6,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { removeEmbededTag } from './utils'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout/Layout'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import {

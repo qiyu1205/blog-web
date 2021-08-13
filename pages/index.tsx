@@ -1,13 +1,12 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from '../components/Layout/Layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
-import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home={true}>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
