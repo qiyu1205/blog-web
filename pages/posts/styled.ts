@@ -39,5 +39,8 @@ export const Content = styled.article`
 
   p>code, li>code {
     color: #da615c;
+    background-color: #ededeb;
+    border-radius: .25rem;
+    padding: 0 .25rem;
   }
 `
