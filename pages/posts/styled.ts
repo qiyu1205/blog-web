@@ -30,12 +30,16 @@ export const Content = styled.article`
     margin: 2rem 0;
     border-radius: 0.4rem;
     padding: 1rem !important;
-    line-height: 1.5;
+    line-height: 1.5em;
     background-color: rgb(40, 44, 52) !important;
   }
 
   code {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  pre code span {
+    line-height: 1.5em;
   }
 
   p>code, li>code {
