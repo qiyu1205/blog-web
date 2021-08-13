@@ -10,6 +10,10 @@ export const Content = styled.article`
   max-width: 58rem;
   margin: 20px auto;
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
   h2 {
     margin: 2.5rem 0 1.25rem;
     font-size: 2rem;
