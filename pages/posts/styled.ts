@@ -20,9 +20,10 @@ export const Content = styled.article`
     font-size: 1.5rem;
   }
 
-  li {
+  li, p {
     line-height: 2em;
   }
+
 
   pre {
     font-size: 1em;
