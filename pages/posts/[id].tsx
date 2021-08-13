@@ -66,13 +66,13 @@ export default function Post({ postData }) {
         </div>
         {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
         <ReactMarkdown
-            remarkPlugins={[gfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={customMarkdownComponents}
-            className="postDetailContent"
-          >
-            {removeEmbededTag(postData.contentHtml)}
-          </ReactMarkdown>
+          remarkPlugins={[gfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={customMarkdownComponents}
+          className="postDetailContent"
+        >
+          {removeEmbededTag(postData.contentHtml)}
+        </ReactMarkdown>
       </article>
     </Layout>
   )
