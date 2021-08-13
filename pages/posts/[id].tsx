@@ -9,6 +9,9 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Layout from '../../components/layout'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import {
+  TableWrapper,
+} from './styled'
 
 export default function Post({ postData }) {
   const customMarkdownComponents = {
@@ -29,22 +32,17 @@ export default function Post({ postData }) {
         </code>
       )
     },
-    // table({ node, inline, className, children, ...props }: any) {
-    //   return (
-    //     <TableWrapper>
-    //       <table {...props}>{children}</table>
-    //     </TableWrapper>
-    //   )
-    // },
-    // img({ node, inline, className, children, ...props }: any) {
-    //   const { src, alt } = props
-    //   return (
-    //     <ImageGroup {...props}>
-    //       <LazyLoadImage imageUrl={src} alt={alt} />
-    //       <ImageAlt>{alt}</ImageAlt>
-    //     </ImageGroup>
-    //   )
-    // },
+    table({ node, inline, className, children, ...props }: any) {
+      return (
+        <TableWrapper>
+          <table {...props}>{children}</table>
+        </TableWrapper>
+      )
+    },
+    img({ node, inline, className, children, ...props }: any) {
+      const { src, alt } = props
+      return <img src={src} alt={alt} />
+    },
     h2({ node, inline, className, children, ...props }: any) {
       return (
         <h2 {...props} id={children ? children[0] : ''}>
