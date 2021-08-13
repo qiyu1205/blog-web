@@ -1,6 +1,18 @@
 # 开发文档
 ## git 工作流
 
+commit 提交使用以下 type 描述：
+- feat: 增加新功能
+- fix: 修复bug
+- docs: 文档（documentation）
+- style：格式（不影响代码运行的变动，例如去掉空格、改变缩进、增删分号）
+- refactor：重构（即不是新增功能，也不是修改bug的变动）
+- test： 测试
+- chore： 构建过程或辅助工具的变动
+- perf： 提高性能的改动
+- ci: 与CI（持续集成服务）有关的改动
+- revert: 执行 git revert 打印的 message
+
 ## 开发规范
 
 ## 项目结构概览
