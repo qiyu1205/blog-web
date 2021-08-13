@@ -7,12 +7,15 @@ import Link from 'next/link'
 import { FC } from 'react'
 const name = 'qiyu1205'
 export const siteTitle = 'Next.js Sample Website'
+import Nav from './Nav/Nav';
 
 interface Props {
   home?: boolean
 }
 
 const Layout: FC<Props> = ({ children, home }) => {
+  const avatar: string = 'http://blog-images.fiveseven.top/avatar.JPG';
+  const user: string = 'SeveNyU';
   return (
     <div className={styles.container}>
       <Head>
@@ -30,7 +33,7 @@ const Layout: FC<Props> = ({ children, home }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         {home ? (
           <>
             <Image
@@ -64,7 +67,11 @@ const Layout: FC<Props> = ({ children, home }) => {
             </h2>
           </>
         )}
-      </header>
+      </header> */}
+      <Nav
+        avatar={avatar}
+        user={user}
+      />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
