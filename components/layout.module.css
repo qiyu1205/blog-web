@@ -1,6 +1,7 @@
 .container {
+  overflow: hidden;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 70px auto 6rem;
 }
 
 .header {
@@ -21,4 +22,8 @@
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.main {
+  padding-top: 20px;
 }

@@ -8,7 +8,7 @@ export const TableWrapper = styled.p`
 
 export const Content = styled.article`
   max-width: 58rem;
-  margin: 0 auto;
+  margin: 20px auto;
 
   h2 {
     margin: 2.5rem 0 1.25rem;
@@ -20,12 +20,24 @@ export const Content = styled.article`
     font-size: 1.5rem;
   }
 
+  li {
+    line-height: 2em;
+  }
+
   pre {
-    font-size: 90%;
+    font-size: 1em;
     margin: 2rem 0;
     border-radius: 0.4rem;
     padding: 1rem !important;
     line-height: 1.5;
     background-color: rgb(40, 44, 52) !important;
+  }
+
+  code {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  p>code, li>code {
+    color: #da615c;
   }
 `
