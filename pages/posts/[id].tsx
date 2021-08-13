@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Post({ postData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -18,7 +18,6 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <Link href='/'> go home</Link>
     </Layout>
   )
 }
