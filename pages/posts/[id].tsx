@@ -39,10 +39,6 @@ export default function Post({ postData }) {
         </TableWrapper>
       )
     },
-    img({ node, inline, className, children, ...props }: any) {
-      const { src, alt } = props
-      return <img src={src} alt={alt} />
-    },
     h2({ node, inline, className, children, ...props }: any) {
       return (
         <h2 {...props} id={children ? children[0] : ''}>
