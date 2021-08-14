@@ -11,7 +11,7 @@ export const Content = styled.article`
   margin: 20px auto 10rem;
 
   .postTitle {
-    margin: 5rem 0 1.5rem;
+    margin: 5rem 0 2rem;
     font-size: 3rem;
     text-align: center;
   }
