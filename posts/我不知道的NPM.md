@@ -9,23 +9,23 @@ date: '2020-12-22'
 
 让我们从 `package.json` 开始，`package.json` 是我们打开新项目的万能钥匙，项目启动脚本、业务依赖、技术栈在这里可以一窥究竟。
 
-## 1. 依赖包的分类
+# 依赖包的分类
 
 `package.json` 文件中的我们常用的依赖是 `dependencies` 和 `devDependencies` ，作为包的发布者可能还需要了解其他三种依赖。
 
-### dependencies
+## dependencies
 
 dependencies（业务依赖）属于线上代码的一部分，比如 `vue` , `Ant Design` 。我们可以通过命令 `npm install packageName -S/--save`把包安装在此依赖项中
 
-### devDependencies
+## devDependencies
 
 devDependencies（开发依赖）只是开发时需要，比如构建工具 `webpack`、编译转换 `babel`、测试工具 `jest` 等。我们可以通过命令 `npm install packageName -D/--save-dev`来安装开发依赖。
 
-### peerDependencies
+## peerDependencies
 
 peerDependencies（同伴依赖）的作用是提示宿主环境去安装插件在peerDependencies中所指定依赖的包，然后插件所依赖的包永远都是宿主环境统一安装的npm包，最终解决插件与所依赖包不一致的问题。
 
-### bundledDependencies
+## bundledDependencies
 
 bundledDependencies（打包依赖）
 
@@ -33,7 +33,7 @@ optionalDependencies
 
 optionalDependencies（可选依赖），如果有一些依赖包即使安装失败，项目仍然能够运行或者希望 `npm` 继续运行，就可以使用 `optionalDependencies`。注意：( `optionalDependencies` 会覆盖 `dependencies` 中的同名依赖包，所以不要在两个地方都写)
 
-## 2. node_modules的目录结构
+# node_modules 的目录结构
 
 `npm install xxx` 后发生了什么呢？在我们输入安装命令后，npm 会把安装过程 log 输出到 terminal 和 npm-debug.log 中，我们可以很直观的看到当前安装的进度。
 
@@ -53,7 +53,7 @@ NPM 会按照 `package.json` 中的 `dependencies` 来下载依赖包，把它�
 
 所以 `npm 5.x` 在 `3.x` 的基础上最大的变动是增加了 `package-lock.json` 文件。这份文件用来记录当前状态下实际安装的各个 npm package 的具体来源和版本号来确保你重新安装时所有包与你上次安装的完全一样。所以在多人协同开发时，这份文件务必上传到 `git`，确保大家的依赖包一致。
 
-## 3. npm scripts 脚本
+# NPM SCRIPTS 脚本
 
 package.json 中的 script 可以用来自定义脚本命令。
 
@@ -72,9 +72,9 @@ package.json 中的 script 可以用来自定义脚本命令。
 npm run compiler && npm run test
 ```
 
-## 4. 如何发布一个 NPM 包？
+# 如何发布一个 NPM 包？
 
-### 4.1 开发一个包
+## 开发一个包
 
 打开终端，依次输入
 
@@ -84,7 +84,7 @@ cd myPackage
 npm init -y
 ```
 
-### 4.1.1 package.json
+## package.json
 
 在生成的 `package.json` 文件中编辑
 
@@ -120,25 +120,25 @@ npm init -y
 
 `keywords` : 提高搜索命中率的关键词
 
-### 4.1.2 功能与单元测试
+## 功能与单元测试
 
 添加实际的代码功能后需添加单元测试验证代码的健壮性，避免线上事故。
 
-### 4.1.3 README.md
+## README.md
 
 README.md 会展示在已发布包的页面，用来介绍当前包的简介，API 等。
 
-### 4.2 注册 NPM 账号
+## 注册 NPM 账号
 
 [NPM官网](https://www.npmjs.com/) 注册一个账号并到邮箱激活
 
-### 4.3 登录
+## 登录
 
 如果是本机第一次发包，在终端输入 `npm adduser` 按照提示输入账号密码邮箱即可。
 
 非首次在终端输入 `npm login` 输入账号密码邮箱即可
 
-### 4.4 更改版本号
+## 更改版本号
 
 包的版本号为 `MAJOR.MINOR.PATCH` 的形式，如 `"vue": "2.6.11"`，每个号含义是：
 
@@ -155,7 +155,7 @@ npm version major # x 大版本 +1，并且重置 y 和 z 位的数字为 0
 
 在 `git` 环境中，执行 `npm version` 后，除了会帮我们修改版本号外，还会默认执行`git add` -> `git commit` -> `git tag` 操作。需要注意的是执行 `npm version` 之前需要将 `git` 工作区的修改提交，否则会执行失败。
 
-### 4.5 发包
+## 发包
 
 发包之前我们要在根目录下创建 `.gitignore` 或 `.npmignore` 将不需要发布的文件写入其中。默认 NPM 发包会忽略 node_modules 文件夹，所以可不写。
 
@@ -230,7 +230,7 @@ npm config set registry https://registry.npmjs.org/
 
 发布成功后在 [NPM官网](https://www.npmjs.com/) 上可以搜索到刚刚发布的包。
 
-### 撤销发布的包
+## 撤销发布的包
 
 如果发现 bug，需要紧急撤销已经发布的包，可执行 `npm unpublish` 命令，注意：只能撤销 24 小时内发布的包。
 
@@ -244,25 +244,25 @@ npm unpublish --force
 npm unpublish my-package-name@1.3.2
 ```
 
-## 5. 如何快速搭建一个 npm 离线服务器？
+# 如何快速搭建一个 NPM 离线服务器？
 
 npm离线服务器的好处是速度快，并且可以使用公司团队内部的私有包。
 
 下面使用 `verdaccio` 来搭建：
 
-### 5.1 安装
+## 安装
 
 ```bash
 npm install -global verdaccio
 ```
 
-### 5.2 运行
+## 运行
 
 ```bash
 verdaccio
 ```
 
-### 5.3 添加定制的源并切换
+## 添加定制的源并切换
 
 我们可以通过执行命令 `nrm add <registry> <url>` 来添加定制的源，其中 `reigstry` 为源名， `url` 为源的路径。
 
