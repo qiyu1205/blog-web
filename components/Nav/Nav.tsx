@@ -41,7 +41,7 @@ const NavigatorList = () => (
   </div>
 );
 
-const Navigator = ({ avatar, user }: Props) => (
+const Nav = ({ avatar, user }: Props) => (
   <NavigatorStyle>
     <div className='logo'>
       <img className='avatar' src={avatar} alt='logo' />
@@ -50,5 +50,5 @@ const Navigator = ({ avatar, user }: Props) => (
     <NavigatorList />
   </NavigatorStyle>
 );
-export default Navigator;
+export default Nav;
   
