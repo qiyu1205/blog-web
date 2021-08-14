@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Layout from '../components/Layout/Layout'
 import PostCard from '../components/PostCard/PostCard';
 
 interface Props {}
@@ -56,7 +57,7 @@ const Blog: FC<Props> = () => {
     },
   ];
   return (
-    <>
+    <Layout>
       {
         postCardDataList.map(({
           source,
@@ -66,7 +67,7 @@ const Blog: FC<Props> = () => {
           tags,
         }, idx) => <PostCard key={idx} source={source} title={title} content={content} time={time} tags={tags} />)
       }
-    </>
+    </Layout>
   );
 }
 

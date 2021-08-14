@@ -12,6 +12,7 @@ import {
   TableWrapper,
   Content,
   Menu,
+  PostTag,
 } from './styled'
 import tocbot from 'tocbot'
 import { PureComponent } from 'react';
@@ -84,6 +85,7 @@ export default class Post extends PureComponent<Props, State> {
           <h1 className="postTitle">{postData.title}</h1>
           <div className="tagsWrap">
             <Date dateString={postData.date} />
+            { postData.tags.split(',').map(tag => <PostTag key={tag}>{tag}</PostTag>) }
           </div>
           <ReactMarkdown
             remarkPlugins={[gfm]}

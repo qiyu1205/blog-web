@@ -87,3 +87,14 @@ export const Menu = styled.aside`
     font-weight: 600;
   }
 `
+
+export const PostTag = styled.span`
+  display: inline-block;
+  margin: 0 .3em;
+  padding: .15em .374em;
+  border-radius: .25em;
+  font-size: 13px;
+  line-height: 1.6em;
+  color: #00965e;
+  background-color: #e5f4ef;
+` 
