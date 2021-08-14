@@ -8,7 +8,7 @@ export const TableWrapper = styled.p`
 
 export const Content = styled.article`
   max-width: 58rem;
-  margin: 20px auto;
+  margin: 20px auto 10rem;
 
   .postTitle {
     margin: 5rem 0 1.5rem;
