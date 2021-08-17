@@ -85,7 +85,7 @@ export default class Post extends PureComponent<Props, State> {
           <h1 className="postTitle">{postData.title}</h1>
           <div className="tagsWrap">
             <Date dateString={postData.date} />
-            { postData.tags.split(',').map(tag => <PostTag key={tag}>{tag}</PostTag>) }
+            { postData.tags?.split(',').map(tag => <PostTag key={tag}>{tag}</PostTag>) }
           </div>
           <ReactMarkdown
             remarkPlugins={[gfm]}
