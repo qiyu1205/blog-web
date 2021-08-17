@@ -1,15 +1,15 @@
-import { FC } from 'react'
-import Head from 'next/head'
-import LayoutStyle from './styled'
+import { FC } from 'react';
+import Head from 'next/head';
 
+import { userInfo } from '../../models';
 import Nav from '../Nav/Nav';
+import LayoutStyle from './styled';
 
 export const siteTitle = 'SeveNyU\'blog'
 interface Props {}
 
 const Layout: FC<Props> = ({ children }) => {
-  const avatar: string = 'http://blog-images.fiveseven.top/avatar.JPG';
-  const user: string = 'SeveNyU';
+  const { avatar, userName } = userInfo;
   return (
     <LayoutStyle>
       <Head>
@@ -29,7 +29,7 @@ const Layout: FC<Props> = ({ children }) => {
       </Head>
       <Nav
         avatar={avatar}
-        user={user}
+        user={userName}
       />
       <main>{children}</main>
     </LayoutStyle>
