@@ -1,4 +1,4 @@
 export const userInfo = {
-  avatar: 'http://blog-images.fiveseven.top/avatar.JPG',
+  avatar: 'http://images.qiyu1205.top/avatar.JPG',
   userName: 'SeveNyU',
 };

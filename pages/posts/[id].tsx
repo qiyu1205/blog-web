@@ -4,7 +4,7 @@ import gfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import { removeEmbededTag } from './utils'
+import { removeEmbededTag } from '../../utils'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Layout from '../../components/Layout/Layout'
 import Date from '../../components/date'
@@ -13,7 +13,7 @@ import {
   Content,
   Menu,
   PostTag,
-} from './styled'
+} from '../../styles/post';
 import tocbot from 'tocbot'
 import { PureComponent } from 'react';
 

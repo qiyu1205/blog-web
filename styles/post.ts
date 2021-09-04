@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const TableWrapper = styled.p`
+const TableWrapper = styled.p`
   display: flex;
   justify-content: center;
   margin: 2rem auto;
 `
 
-export const Content = styled.article`
+const Content = styled.article`
   max-width: 58rem;
   margin: 20px auto 10rem;
 
@@ -65,7 +65,7 @@ export const Content = styled.article`
   }
 `
 
-export const Menu = styled.aside`
+const Menu = styled.aside`
   position: fixed;
   top: 25rem;
   left: 2rem;
@@ -88,7 +88,7 @@ export const Menu = styled.aside`
   }
 `
 
-export const PostTag = styled.span`
+const PostTag = styled.span`
   display: inline-block;
   margin: 0 .3em;
   padding: .15em .374em;
@@ -98,3 +98,10 @@ export const PostTag = styled.span`
   color: #00965e;
   background-color: #e5f4ef;
 ` 
+
+export {
+  TableWrapper,
+  Content,
+  Menu,
+  PostTag,
+};
