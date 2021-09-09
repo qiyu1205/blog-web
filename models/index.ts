@@ -1,6 +1,6 @@
 export const userInfo = {
   avatar: 'http://images.qiyu1205.top/avatar.JPG',
-  userName: 'SeveNyU',
+  userName: 'QiyU',
 };
 
 export const postCardDataList = [

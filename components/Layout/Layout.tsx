@@ -5,7 +5,7 @@ import { userInfo } from '../../models';
 import Nav from '../Nav/Nav';
 import styles from './layout.module.scss';
 
-export const siteTitle = 'SeveNyU\'blog'
+export const siteTitle = 'QiyU'
 interface Props {}
 
 const Layout: FC<Props> = ({ children }) => {

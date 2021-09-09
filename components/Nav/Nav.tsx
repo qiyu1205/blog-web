@@ -45,7 +45,7 @@ const Nav = ({ avatar, user }: Props) => (
   <div className={styles.nav}>
     <div className={styles.logo}>
       <img className={styles.avatar} src={avatar} alt='logo' />
-      <span>{`${user}`}' blog</span>
+      <span className={styles.userName}>{`${user}`}</span>
     </div>
     <NavigatorList />
   </div>
