@@ -5,8 +5,7 @@ import { PureComponent } from 'react'
 
 import Layout, { siteTitle } from '../components/Layout/Layout'
 import { getSortedPostsData } from '../lib/posts'
-import IndexStyled from './indexStyled'
-
+import styles from './index.module.scss';
 interface Props{
   allPostsData: Array<any>,
 }
@@ -22,16 +21,7 @@ export default class Home extends PureComponent<Props, State> {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <IndexStyled>
-          <div className="c">
-          <div className="drop drop1"></div>
-          <div className="drop drop2"></div>
-          <div className="text-c">
-            <h1>DROPMORPHISM</h1>
-            <p>Both the drops are created using CSS</p>
-          </div>
-        </div>
-        </IndexStyled>
+        <div className={styles.banner}></div>
         <section>
           {this.props.allPostsData.map(({ id, title }) => (
             <div key={id}>

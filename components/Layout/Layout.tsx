@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { userInfo } from '../../models';
 import Nav from '../Nav/Nav';
-import LayoutStyle from './styled';
+import styles from './layout.module.scss';
 
 export const siteTitle = 'SeveNyU\'blog'
 interface Props {}
@@ -11,7 +11,7 @@ interface Props {}
 const Layout: FC<Props> = ({ children }) => {
   const { avatar, userName } = userInfo;
   return (
-    <LayoutStyle>
+    <div className={styles.layout}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -32,7 +32,7 @@ const Layout: FC<Props> = ({ children }) => {
         user={userName}
       />
       <main>{children}</main>
-    </LayoutStyle>
+    </div>
   )
 }
 

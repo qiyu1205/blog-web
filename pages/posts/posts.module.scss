@@ -1,12 +1,10 @@
-import styled from 'styled-components'
-
-const TableWrapper = styled.p`
+.tableWrapper {
   display: flex;
   justify-content: center;
   margin: 2rem auto;
-`
+}
 
-const Content = styled.article`
+.content {
   max-width: 58rem;
   margin: 20px auto 10rem;
 
@@ -63,9 +61,9 @@ const Content = styled.article`
     border-radius: .25rem;
     padding: 0 .25rem;
   }
-`
+}
 
-const Menu = styled.aside`
+.menu {
   position: fixed;
   top: 25rem;
   left: 2rem;
@@ -86,9 +84,9 @@ const Menu = styled.aside`
     color: #007fff;
     font-weight: 600;
   }
-`
+}
 
-const PostTag = styled.span`
+.postTag {
   display: inline-block;
   margin: 0 .3em;
   padding: .15em .374em;
@@ -97,11 +95,4 @@ const PostTag = styled.span`
   line-height: 1.6em;
   color: #00965e;
   background-color: #e5f4ef;
-` 
-
-export {
-  TableWrapper,
-  Content,
-  Menu,
-  PostTag,
-};
+}

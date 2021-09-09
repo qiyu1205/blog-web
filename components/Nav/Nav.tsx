@@ -5,7 +5,7 @@ import {
   ProfileOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import NavigatorStyle from './styled';
+import styles from './nav.module.scss';
 
 interface Props {
   avatar: string,
@@ -13,27 +13,27 @@ interface Props {
 }
 
 const NavigatorList = () => (
-  <div className='navgatorList'>
+  <div className={styles.navgatorList}>
     <Link href='/'>
-      <a className='navItem'>
+      <a className={styles.navItem}>
         <HomeOutlined />
         <span>HOME</span>
       </a>
     </Link>
     <Link  href='/blog'>
-      <a className='navItem'>
+      <a className={styles.navItem}>
         <CalendarOutlined />
         <span>BLOG</span>
       </a>
     </Link>
     <Link  href={'/archive'}>
-      <a className='navItem'>
+      <a className={styles.navItem}>
         <ProfileOutlined />
         <span>TIMELINE</span>
       </a>
     </Link>
     <Link href={'/me'}>
-      <a className='navItem'>
+      <a className={styles.navItem}>
         <UserOutlined />
         <span>ABOUT</span>
       </a>
@@ -42,13 +42,13 @@ const NavigatorList = () => (
 );
 
 const Nav = ({ avatar, user }: Props) => (
-  <NavigatorStyle>
-    <div className='logo'>
-      <img className='avatar' src={avatar} alt='logo' />
+  <div className={styles.nav}>
+    <div className={styles.logo}>
+      <img className={styles.avatar} src={avatar} alt='logo' />
       <span>{`${user}`}' blog</span>
     </div>
     <NavigatorList />
-  </NavigatorStyle>
+  </div>
 );
 export default Nav;
   

@@ -8,12 +8,7 @@ import { removeEmbededTag } from '../../utils'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Layout from '../../components/Layout/Layout'
 import Date from '../../components/date'
-import {
-  TableWrapper,
-  Content,
-  Menu,
-  PostTag,
-} from '../../styles/post';
+import styles from './posts.module.scss'
 import tocbot from 'tocbot'
 import { PureComponent } from 'react';
 
@@ -41,9 +36,9 @@ const customMarkdownComponents = {
   },
   table({ node, inline, className, children, ...props }: any) {
     return (
-      <TableWrapper>
+      <p className={styles.tableWrapper}>
         <table {...props}>{children}</table>
-      </TableWrapper>
+      </p>
     )
   },
   h2({ node, inline, className, children, ...props }: any) {
@@ -80,12 +75,12 @@ export default class Post extends PureComponent<Props, State> {
         <Head>
           <title>{postData.title}</title>
         </Head>
-        <Menu className="postMenu" />
-        <Content>
-          <h1 className="postTitle">{postData.title}</h1>
-          <div className="tagsWrap">
+        <aside className={styles.postMenu} />
+        <article className={styles.content}>
+          <h1 className={styles.postTitle}>{postData.title}</h1>
+          <div className={styles.tagsWrap}>
             <Date dateString={postData.date} />
-            { postData.tags?.split(',').map(tag => <PostTag key={tag}>{tag}</PostTag>) }
+            { postData.tags?.split(',').map(tag => <span className={styles.postTag} key={tag}>{tag}</span>) }
           </div>
           <ReactMarkdown
             remarkPlugins={[gfm]}
@@ -95,7 +90,7 @@ export default class Post extends PureComponent<Props, State> {
           >
             {removeEmbededTag(postData.contentHtml)}
           </ReactMarkdown>
-        </Content>
+        </article>
       </Layout>
     )
   }
