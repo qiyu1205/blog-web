@@ -53,3 +53,28 @@ export const postCardDataList = [
     time: '2019-10-12',
   },
 ];
+
+// 修改需在 https://www.iconfont.cn/ 中删改 blog-web 中的图标，并更新链接。
+export const fonterIconFontConfig = {
+  scriptUrl: [
+    '//at.alicdn.com/t/font_2891787_5ommsjip044.js', 
+  ],
+  iconLinks: [
+    {
+      name: 'icon-codepen',
+      link: 'https://codepen.io/',
+    },
+    {
+      name: 'icon-github',
+      link: 'https://github.com/qiyu1205',
+    },
+    {
+      name: 'icon-npm',
+      link: 'https://www.npmjs.com/~hapig',
+    },
+    {
+      name: 'icon-chakanjianli',
+      link: 'http://qiyu1205.top/me',
+    },
+  ],
+};
