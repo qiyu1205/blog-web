@@ -6,7 +6,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import styles from './layout.module.scss';
 
-export const siteTitle = 'QiyU'
+export const siteTitle = 'QiyU\'s Blog'
 interface Props {}
 
 const Layout: FC<Props> = ({ children }) => {
@@ -32,7 +32,7 @@ const Layout: FC<Props> = ({ children }) => {
         avatar={avatar}
         user={userName}
       />
-      <main>{children}</main>
+      <main className={styles.mainContent}>{children}</main>
       <Footer />
     </div>
   )
