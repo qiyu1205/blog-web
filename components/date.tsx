@@ -4,8 +4,8 @@ export default function Date({ dateString }) {
   const date = parseISO(dateString)
   return (
     <>
-      <span>Released At </span>
-      <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+      <span>发布于</span>
+      <time dateTime={dateString}>{format(date, 'yyyy-MM-dd')}</time>
     </>
   )
 }
