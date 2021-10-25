@@ -1,13 +1,13 @@
 import React from 'react';
 import { ClockCircleOutlined, TagsOutlined } from '@ant-design/icons';
-import PostCardStyle from './styled';
+import styles from './postCard.module.scss'
 
 interface Props {
   source: string,
   title: string,
   content: string,
   time: string,
-  tags: Array<string>,
+  tags?: Array<string>,
 }
 
 const PostCard = ({
@@ -17,24 +17,14 @@ const PostCard = ({
   time,
   tags,
 }: Props) =>  (
-  <PostCardStyle>
-    <img src={source} alt='' />
-    <div className='PreviewContent'>
-    <div className='previewLink'>{title}</div>
-    <div className='previewText'>{content}</div>
-    <div className='timeTags'>
-      <div className='previewDate'><ClockCircleOutlined /> {time}</div>
-      <div className='tags'>
-        <TagsOutlined />
-        {tags.map((tag, idx) => (
-          <span key={idx}>
-            {tag}
-          </span>
-        ))}
-      </div>
+  <div className={styles.cardContainer}>
+    <div style={{ backgroundImage: `url(${source})` }} className={styles.postCover}></div>
+    <div className={styles.postContent}>
+      <h2 className={styles.postTitle}>{title}</h2>
+      <div className={styles.postIntro}>{content}</div>
+      <div className={styles.postTime}>{time}</div>
     </div>
-    </div>
-  </PostCardStyle>
+  </div>
 );
 
 export default PostCard;

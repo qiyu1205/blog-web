@@ -1,0 +1,63 @@
+.cardContainer {
+  border-radius: 5px;
+  box-shadow: 8px 14px 38px rgb(39 44 49 / 6%), 1px 3px 8px rgb(39 44 49 / 3%);
+  color: #586069;
+  margin-bottom: 4rem;
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow .5s ease;
+  will-change: box-shadow;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 24px -1px rgb(0 24 67 / 30%);
+  }
+
+  .postCover {
+    background-position: 50%;
+    background-size: 100% 100%;
+    display: block;
+    overflow: hidden;
+    padding-top: 50%;
+    position: relative;
+    width: 100%;
+  }
+
+  .postContent {
+    padding: 12px;
+
+    .postTitle {
+      font-size: 20px;
+      font-weight: bolder;
+      line-height: 24px;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      word-break: break-all;
+      text-overflow: ellipsis;
+    }
+  
+    .postIntro {
+      word-wrap: break-word;
+      -webkit-line-clamp: 3;
+      color: #8f8f8f;
+      display: -webkit-box;
+      font-size: 16px;
+      line-height: 2;
+      margin: 8px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+    }
+  
+    .postTime {
+      align-items: center;
+      color: #8f8f8f;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-size: 14px;
+    }
+  }
+
+}
