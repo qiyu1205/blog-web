@@ -1,7 +1,7 @@
 ---
 title: 'markdown常用语法'
 date: '2017-09-03'
-tags: 'Markdown,Blog'
+tags: 'Markdown'
 quote: 'Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。'
 titlePic: 'http://images.qiyu1205.top/%E6%97%A5%E8%90%BD.jpg'
 ---
@@ -33,14 +33,14 @@ Markdown是一种超轻量级的标记语言，常用的标记符号不超过十
 #### 分级标题
 
 标题是每篇文章中最常用的格式，在Markdown语法中，如果某行文字被定义为标题，只需要在行首加上#符号即可：
-    ```
-        # h 1
-        ## h 2
-        ### h 3
-        #### h 4
-        ##### h 5
-        ###### h 6
-    ```
+```Markdown
+    # h 1
+    ## h 2
+    ### h 3
+    #### h 4
+    ##### h 5
+    ###### h 6
+```
 显示：
 
 # h 1
@@ -75,15 +75,16 @@ Markdown是一种超轻量级的标记语言，常用的标记符号不超过十
 #### 内嵌代码
 
 第一种:引入单行代码出现一个代码框，需要使用键盘左上角的ESC键下面的反单引号夹在文字两侧，两侧各一个就行。
-例如：\`Hello world！ \`
+例如：\`console.log('Hello world！') \`
 
 显示：
-` Hellow world！`
+` console.log('Hello world！')`
+
 第二种：多行代码的引入需要在代码段的前后分别使用三个反单引号
 显示：
 
-```
-hello world!
+```javaScript
+  console.log('Hello world！')
 ```
 
 #### 引入内容
@@ -114,7 +115,7 @@ hello world!
 
 #### 绘制表格
 
-```
+```Markdown
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
@@ -132,7 +133,7 @@ hello world!
 
 Markdown 支持在以下这些符号前面加上反斜杠来帮助插入普通的符号：
 
-```
+```Markdown
 \   反斜线
 `   反引号
 *   星号
