@@ -78,3 +78,5 @@ export const fonterIconFontConfig = {
     },
   ],
 };
+
+export const beian = '皖ICP备2021012675号';

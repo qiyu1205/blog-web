@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from './footer.module.scss'
 import { createFromIconfontCN } from '@ant-design/icons'
-import { fonterIconFontConfig } from '../../models';
+import { fonterIconFontConfig, beian } from '../../models';
 
 interface Props {}
 
@@ -25,7 +25,7 @@ const Footer: FC<Props> = () => (
     </div>
     <div>
       <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-        皖ICP备2021012675号
+        { beian }
       </a>
     </div>
   </div>
