@@ -2,8 +2,7 @@
 title: '我不知道的 NPM'
 date: '2020-12-22'
 tags: '微信公众号, web, weixin-js-sdk'
-quote: '对于 `NPM` 之前一直停留来使用层面，没有做过多的了解。最近由于项目原因补了一些相关知识，烂笔头记下以防忘记。
-蛤 ？ Github 收购了 NPM （雾）让我们从 `package.json` 开始，`package.json` 是我们打开新项目的万能钥匙，项目启动脚本、业务依赖、技术栈在这里可以一窥究竟。'
+quote: '对于 npm 之前一直停留来使用层面，没有做过多的了解。最近由于项目原因补了一些相关知识，烂笔头记下以防忘记...'
 titlePic: 'http://images.qiyu1205.top/GU2A4110.jpg'
 ---
 
