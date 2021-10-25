@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { userInfo } from '../../models';
 import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 import styles from './layout.module.scss';
 
 export const siteTitle = 'QiyU'
@@ -32,6 +33,7 @@ const Layout: FC<Props> = ({ children }) => {
         user={userName}
       />
       <main>{children}</main>
+      <Footer />
     </div>
   )
 }
