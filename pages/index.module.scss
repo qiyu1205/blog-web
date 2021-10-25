@@ -1,24 +1,46 @@
-.banner {
-  margin: 0 auto;
-  position: relative;
-  background-color: #e7f6f8;
-  height: 800px;
-  width: 100%;
-  border-radius: 20px;
+.mainTitleWrap {
+  padding: 40px;
+  text-align: center;
+
+  .mainTitle {
+    display: inline-block;
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      background-color: #333;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 50%;
+    }
+  }
+
   h1 {
-    position: absolute;
-    left: 15%;
-    top: 35%;
-    font-size: 60px;
+    font-size: 2em;
+    margin: 0.67em 0;
   }
-  .bannerPic1 {
-    position: absolute;
-    right: 5%;
-    bottom: 50px;
-  }
-  .bannerPic2 {
-    position: absolute;
-    top: 50px;
-    right: 5%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .postSmall {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+
+    a {
+      text-decoration: none;
+    }
   }
 }

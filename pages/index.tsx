@@ -5,16 +5,14 @@ import { PureComponent } from 'react'
 import Layout, { siteTitle } from '../components/Layout/Layout'
 import { getSortedPostsData } from '../lib/posts'
 import styles from './index.module.scss'
-import bannerPic1 from '../public/images/banner1.svg'
-import bannerPic2 from '../public/images/banner2.svg'
+import PostCard from '../components/PostCard/PostCard'
 interface Props{
   allPostsData: Array<any>,
 }
 interface State{}
 
 export default class Home extends PureComponent<Props, State> {
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -22,16 +20,23 @@ export default class Home extends PureComponent<Props, State> {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <div className={styles.banner}>
-          <h1>Hi, QiyU</h1>
-          <img className={styles.bannerPic1} src={bannerPic1.src} width='40%' height='40%' />
-          <img className={styles.bannerPic2} src={bannerPic2.src} width='50%' height='50%' />
+        <div className={styles.mainTitleWrap}>
+          <h1 className={styles.mainTitle}>所有文章</h1>
         </div>
-        <section>
-          {this.props.allPostsData.map(({ id, title }) => (
-            <div key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+        <section className={styles.row}>
+          {this.props.allPostsData.map(({
+            id, date, quote, title, titlePic
+          }) => (
+            <div key={id} className={styles.postSmall}>
+              <Link  href={`/posts/${id}`}>
+                <a>
+                  <PostCard
+                    source={titlePic}
+                    title={title}
+                    content={quote}
+                    time={date}
+                  />
+                </a>
               </Link>
             </div>
           ))}
