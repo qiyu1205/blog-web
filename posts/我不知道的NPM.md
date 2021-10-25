@@ -166,7 +166,7 @@ npm version major # x 大版本 +1，并且重置 y 和 z 位的数字为 0
 
 `.npmignore` 文件
 
-```javaScript
+```bash
 src/
 test/
 coverage/
@@ -178,7 +178,7 @@ jest.config.js
 
 `.gitignore` 文件
 
-```javaScript
+```bash
 .DS_Store
 node_modules
 /lib
