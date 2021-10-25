@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {
   HomeOutlined,
-  CalendarOutlined,
+  ApiOutlined,
   ProfileOutlined,
   UserOutlined,
 } from '@ant-design/icons';
@@ -17,25 +17,25 @@ const NavigatorList = () => (
     <Link href='/'>
       <a className={styles.navItem}>
         <HomeOutlined />
-        <span>HOME</span>
+        <span>博客</span>
       </a>
     </Link>
-    <Link  href='/blog'>
+    <Link  href='/laboratory'>
       <a className={styles.navItem}>
-        <CalendarOutlined />
-        <span>BLOG</span>
+        <ApiOutlined />
+        <span>实验室</span>
       </a>
     </Link>
     <Link  href={'/archive'}>
       <a className={styles.navItem}>
         <ProfileOutlined />
-        <span>TIMELINE</span>
+        <span>归档</span>
       </a>
     </Link>
     <Link href={'/me'}>
       <a className={styles.navItem}>
         <UserOutlined />
-        <span>ABOUT</span>
+        <span>关于我</span>
       </a>
     </Link>
   </div>

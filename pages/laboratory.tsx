@@ -6,7 +6,7 @@ import { postCardDataList } from '../models/index';
 interface Props {}
 
 
-const Blog: FC<Props> = () => (
+const Laboratory: FC<Props> = () => (
   <Layout>
     {
       postCardDataList.map(({
@@ -20,4 +20,4 @@ const Blog: FC<Props> = () => (
   </Layout>
 );
 
-export default Blog;
+export default Laboratory;
