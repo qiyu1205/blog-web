@@ -9,15 +9,15 @@ titlePic: 'http://images.qiyu1205.top/github.jpg'
 什么是 Hexo？  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
 
-#### 安装 Git
+## 安装 Git
 
 到 [Git](https://git-scm.com) 官网下载相应版本,安装即可。
 
-#### 安装 Node.js
+## 安装 Node.js
 
 到 [Node.js](https://nodejs.org/en/) 官网下载相应版本，安装即可。
 
-#### 安装 hexo
+## 安装 hexo
 
 打开终端，输入
 
@@ -27,7 +27,7 @@ npm install -g hexo-cli
 
 (npm 是 Node 自带的包管理工具)
 
-#### 创建 hexo 文件夹
+## 创建 hexo 文件夹
 
 在想要创建 hexo 的地方新建 hexo 文件夹，执行命令：
 
@@ -42,7 +42,7 @@ hexo 会自动在你的 hexo 文件夹下创建搭建网站需要的所有文件
  npm install
 ```
 
-#### 本地运行
+## 本地运行
 
 目前为止已经搭建好本地的 hexo 博客了，在终端中执行如下命令：
 
@@ -53,15 +53,15 @@ hexo server （或者 hexo s） # 部署到Git
 
 然后打开浏览器，在地址栏输入 localhost:4000，就可以看到我们搭建好的本地博客了。到此只是搭建好了本地博客，还需要将博客部署到 github 上，显然，需要注册一个 github 账号。
 
-#### 注册 Github 账号
+## 注册 Github 账号
 
 进入 [github官网](https://github.com) 注册就好了，记住不要忘了验证邮件。
 
-#### 新建 repository
+## 新建 repository
 
 新建一个 repository，名字是 yourgithubname.github.io
 
-#### 部署博客
+## 部署博客
 
 进入你的 hexo 文件夹根目录下，用编辑器打开 _config.yml，修改 deploy 项，如下（根据你的 github 进行相应更改）：
 
@@ -94,7 +94,7 @@ hexo server （或者 hexo s） # 部署到Git
 
 注意：如果是第一次使用 github，则需要设置 ssh ，可以参考 [教程](https://mp.weixin.qq.com/s?__biz=MzA4NTQwNDcyMA==&mid=2650661821&idx=1&sn=c6116ed82bff2d083bb152fbd8cbc38d&scene=1&srcid=0621l9okMDolnRp9zG9xHx9E#wechat_redirect)。
 
-#### 整站配置
+## 整站配置
 
 hexo根目录下的 `_config.yml（D:\hexo_config.yml）` 中是对整个站点的基本配置。除了之前配置的 deploy 项和默认的以外，还需配置了以下项：
 
@@ -111,7 +111,7 @@ hexo根目录下的 `_config.yml（D:\hexo_config.yml）` 中是对整个站点�
 
 当然主题也可以做相应的配置，这里先不细说。
 
-#### 发表文章
+## 发表文章
 
 首先在终端中输入：
 
@@ -136,13 +136,13 @@ hexo根目录下的 `_config.yml（D:\hexo_config.yml）` 中是对整个站点�
 
 然后，将博客部署到 github 上，就能看见我们写的博客啦。
 
-#### 安装主题
+## 安装主题
 
 进入 hexo 官方 [主题](https://hexo.io/themes/) 网站挑选自己喜欢的主题
 
 点击主题名，进入作者的 GitHub，参考作者给的文档（README.md）进行安装
 
-#### Hexo命令：
+## Hexo命令：
 
 ```shell
 hexo new "postName"     # 新建文章 
@@ -165,11 +165,11 @@ hexo s == hexo server
 hexo d == hexo deploy
 ```
 
-#### 相关链接
+## 相关链接
 
 [Hexo官网](https://hexo.io/zh-cn/)
 
-#### 相关问题
+## 相关问题
 
 以下是我自己搭建博客时候遇到的一些问题
 
@@ -209,7 +209,7 @@ hexo new "now"
 
 新建后会产生 now.md 和名为 now 的文件夹,可以将引用的图片文件存放在这个文件夹下面。
 
-#### 域名绑定
+## 域名绑定
 
 1.域名注册
 
