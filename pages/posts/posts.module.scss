@@ -67,25 +67,8 @@
 
 .menu {
   position: fixed;
-  top: 25rem;
-  left: 2rem;
-
-  .toc-link {
-    text-decoration: none;
-    font-size: 1rem;
-    color: rgb(40, 44, 52);
-  }
-
-  .toc-list {
-    padding-left: 1rem;
-    line-height: 2rem;
-    list-style-type: none;
-  }
-
-  .is-active-link {
-    color: #007fff;
-    font-weight: 600;
-  }
+  top: 25%;
+  right: 1.5rem;
 }
 
 .postTag {

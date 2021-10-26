@@ -10,7 +10,7 @@ import Layout from '../../components/Layout/Layout'
 import Date from '../../components/date'
 import styles from './posts.module.scss'
 import tocbot from 'tocbot'
-import { PureComponent } from 'react';
+import { PureComponent } from 'react'
 
 interface Props {
   postData?: any,
@@ -75,8 +75,8 @@ export default class Post extends PureComponent<Props, State> {
         <Head>
           <title>{postData.title}</title>
         </Head>
-        <aside className={styles.postMenu} />
-        <article className={styles.content}>
+        <aside className={`${styles.menu} postMenu`} />
+        <article className={`${styles.content}`} >
           <h1 className={styles.postTitle}>{postData.title}</h1>
           <div className={styles.tagsWrap}>
             <Date dateString={postData.date} />

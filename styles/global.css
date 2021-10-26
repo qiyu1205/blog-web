@@ -3,3 +3,20 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
 }
+
+.postMenu .toc-list {
+  padding-left: 1rem;
+  line-height: 2rem;
+  list-style-type: none;
+}
+
+.toc-list .toc-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #707070;
+}
+
+.toc-list .is-active-link {
+  color: #007fff;
+  font-weight: 600;
+}
