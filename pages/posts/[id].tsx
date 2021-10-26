@@ -10,12 +10,16 @@ import Layout from '../../components/Layout/Layout'
 import Date from '../../components/date'
 import styles from './posts.module.scss'
 import tocbot from 'tocbot'
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
+import { throttle } from 'lodash'
+
 
 interface Props {
   postData?: any,
 }
-interface State {}
+interface State {
+  menuFixed: boolean,
+}
 const customMarkdownComponents = {
   code({ node, inline, className, children, ...props }: any) {
     const match = /language-(\w+)/.exec(className || '')
@@ -57,6 +61,14 @@ const customMarkdownComponents = {
   },
 }
 export default class Post extends PureComponent<Props, State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuFixed: false,
+    };
+  }
+
+  menuRef = React.createRef<HTMLDivElement>()
 
   componentDidMount() {
     // init tocbot
@@ -66,6 +78,16 @@ export default class Post extends PureComponent<Props, State> {
       headingSelector: 'h1, h2, h3',
       hasInnerContainers: true,
     })
+
+    window.addEventListener('scroll', throttle(this.handleScroll, 200))
+  }
+
+  handleScroll = () => {
+    const offsetTop = this.menuRef.current?.getBoundingClientRect().top;
+    const menuFixed = offsetTop < 71;
+    if (this.state.menuFixed !== menuFixed) {
+      this.setState({ menuFixed })
+    }
   }
 
   render() {
@@ -75,22 +97,26 @@ export default class Post extends PureComponent<Props, State> {
         <Head>
           <title>{postData.title}</title>
         </Head>
-        <aside className={`${styles.menu} postMenu`} />
-        <article className={`${styles.content}`} >
-          <h1 className={styles.postTitle}>{postData.title}</h1>
-          <div className={styles.tagsWrap}>
-            <Date dateString={postData.date} />
-            { postData.tags?.split(',').map(tag => <span className={styles.postTag} key={tag}>{tag}</span>) }
-          </div>
-          <ReactMarkdown
-            remarkPlugins={[gfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={customMarkdownComponents}
-            className="postDetailContent"
-          >
-            {removeEmbededTag(postData.contentHtml)}
-          </ReactMarkdown>
-        </article>
+        <section className={styles.postWrap}>
+          <aside ref={this.menuRef} className={styles.catelogWrap}>
+            <div  className={`${styles.menu} postMenu ${this.state.menuFixed ? styles.menuFixed : ''}`} ></div>
+          </aside>
+          <article className={`${styles.content}`} >
+            <h1 className={styles.postTitle}>{postData.title}</h1>
+            <div className={styles.tagsWrap}>
+              <Date dateString={postData.date} />
+              { postData.tags?.split(',').map(tag => <span className={styles.postTag} key={tag}>{tag}</span>) }
+            </div>
+            <ReactMarkdown
+              remarkPlugins={[gfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={customMarkdownComponents}
+              className="postDetailContent"
+            >
+              {removeEmbededTag(postData.contentHtml)}
+            </ReactMarkdown>
+          </article>
+        </section>
       </Layout>
     )
   }
