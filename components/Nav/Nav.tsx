@@ -42,13 +42,15 @@ const NavigatorList = () => (
 );
 
 const Nav = ({ avatar, user }: Props) => (
-  <div className={styles.nav}>
-    <div className={styles.logo}>
-      <img className={styles.avatar} src={avatar} alt='logo' />
-      <span className={styles.userName}>{`${user}`}</span>
+  <header className={styles.header}>
+    <div className={styles.nav}>
+      <div className={styles.logo}>
+        <img className={styles.avatar} src={avatar} alt='logo' />
+        <span className={styles.userName}>{`${user}`}</span>
+      </div>
+      <NavigatorList />
     </div>
-    <NavigatorList />
-  </div>
+  </header>
 );
 export default Nav;
   

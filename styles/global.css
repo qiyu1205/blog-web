@@ -20,3 +20,5 @@ body {
   color: #007fff;
   font-weight: 600;
 }
+
+::selection { background: #f66666; }

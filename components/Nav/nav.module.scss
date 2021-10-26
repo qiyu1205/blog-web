@@ -1,49 +1,60 @@
-.nav {
+.header {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-  background-color: hsla(0,0%,100%,.9);
-  z-index: 99;
-  font-size: 16px;
-  padding: 0 70px;
+  right: 0;
   border-bottom: 1px solid #e8e8e8;
-  color: #666;
-  .logo{
+
+  .nav {
     display: flex;
     align-items: center;
-    font-size: 12px;
-    font-weight: 400;
-    .avatar {
-      width: 40px;
-      height: 40px;
-      padding: 4px;
-      margin-right: 10px;
-      border-radius: 50%;
-      border: 1px solid #999;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 70px;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 16px;
+    background-color: hsla(0,0%,100%,.9);
+
+    .logo{
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 1px solid #999;
+      }
+
+      .userName {
+        font-size: 16px;
+        font-weight: 800;
+        color: #707070;
+      }
     }
-    .userName {
-      font-size: 16px;
-      font-weight: 800;
-      color: #707070;
-    }
-    }
-    .navgatorList {
-      .navItem {
-        text-decoration: none;
-        margin: 0 15px;
-        color: #666;
-        font-size: 15px;
+
+      .navgatorList {
+        .navItem {
+          text-decoration: none;
+          margin: 0 15px;
+          color: #666;
+          font-size: 15px;
+
+          span {
+            margin-left: 5px;
+          }
+        }
+
         span {
-          margin-left: 5px;
+          padding-left: 5px;
         }
       }
-      span {
-        padding-left: 5px;
-      }
-    }
+  }
 }
