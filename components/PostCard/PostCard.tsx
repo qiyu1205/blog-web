@@ -1,5 +1,4 @@
 import React from 'react';
-import { ClockCircleOutlined, TagsOutlined } from '@ant-design/icons';
 import styles from './postCard.module.scss'
 
 interface Props {
@@ -15,7 +14,6 @@ const PostCard = ({
   title,
   content,
   time,
-  tags,
 }: Props) =>  (
   <div className={styles.cardContainer}>
     <div style={{ backgroundImage: `url(${source})` }} className={styles.postCover}></div>
