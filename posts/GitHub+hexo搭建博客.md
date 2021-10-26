@@ -142,7 +142,7 @@ hexo根目录下的 `_config.yml（D:\hexo_config.yml）` 中是对整个站点�
 
 点击主题名，进入作者的 GitHub，参考作者给的文档（README.md）进行安装
 
-## Hexo命令：
+## Hexo命令
 
 ```shell
 hexo new "postName"     # 新建文章 
