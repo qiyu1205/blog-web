@@ -3,7 +3,7 @@ title: 'Git 相关'
 date: '2017-12-26'
 tags: 'Git'
 quote: '一般单元测试需要 一个测试框架（mocha）、一个测试运行器（karma）、一个断言库（chai）、一个单元测试工具库（Vue Test Uitls）和一个用于测试的浏览器环境...'
-titlePic: 'http://images.qiyu1205.top/post-git.jpg'
+titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
 ---
 
 # 常见Git命令

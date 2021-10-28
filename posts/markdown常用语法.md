@@ -3,7 +3,7 @@ title: 'markdown常用语法'
 date: '2017-09-03'
 tags: 'Markdown'
 quote: 'Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。'
-titlePic: 'http://images.qiyu1205.top/house.jpg'
+titlePic: 'http://images.qiyu1205.top/post-mountains-2.png'
 ---
 
 Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。

@@ -3,7 +3,7 @@ title: '我不知道的 NPM'
 date: '2020-12-22'
 tags: 'NPM'
 quote: '对于 npm 之前一直停留来使用层面，没有做过多的了解。最近由于项目原因补了一些相关知识，烂笔头记下以防忘记...'
-titlePic: 'http://images.qiyu1205.top/GU2A4110.jpg'
+titlePic: 'http://images.qiyu1205.top/post-boat.png'
 ---
 
 对于 `NPM` 之前一直停留来使用层面，没有做过多的了解。最近由于项目原因补了一些相关知识，烂笔头记下以防忘记。
