@@ -3,7 +3,7 @@ title: '前端技术梳理-MVVM 框架'
 date: '2021-10-01'
 tags: 'web, 梳理'
 quote: 'xxxxxxxxxxxx'
-titlePic: 'http://images.qiyu1205.top/post-mountains-3.jpg'
+titlePic: 'http://images.qiyu1205.top/post-planets.jpg'
 ---
 
 什么是 MVVM ？
