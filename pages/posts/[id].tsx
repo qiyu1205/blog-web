@@ -17,9 +17,8 @@ import { throttle } from 'lodash'
 interface Props {
   postData?: any,
 }
-interface State {
-  menuFixed: boolean,
-}
+interface State {}
+
 const customMarkdownComponents = {
   code({ node, inline, className, children, ...props }: any) {
     const match = /language-(\w+)/.exec(className || '')
@@ -63,9 +62,6 @@ const customMarkdownComponents = {
 export default class Post extends PureComponent<Props, State> {
   constructor(props) {
     super(props);
-    this.state = {
-      menuFixed: false,
-    };
   }
 
   menuRef = React.createRef<HTMLDivElement>()
@@ -78,16 +74,6 @@ export default class Post extends PureComponent<Props, State> {
       headingSelector: 'h1, h2, h3',
       hasInnerContainers: true,
     })
-
-    window.addEventListener('scroll', this.handleScroll)
-  }
-
-  handleScroll = () => {
-    const offsetTop = this.menuRef.current?.getBoundingClientRect().top;
-    const menuFixed = offsetTop < 71;
-    if (this.state.menuFixed !== menuFixed) {
-      this.setState({ menuFixed })
-    }
   }
 
   render() {
@@ -99,7 +85,7 @@ export default class Post extends PureComponent<Props, State> {
         </Head>
         <section className={styles.postWrap}>
           <aside ref={this.menuRef} className={styles.catelogWrap}>
-            <div  className={`${styles.menu} post-menu ${styles.menuFixed}`} ></div>
+            <div  className={`post-menu ${styles.menuFixed}`} ></div>
           </aside>
           <article className={`${styles.content}`} >
             <h1 className={styles.postTitle}>{postData.title}</h1>

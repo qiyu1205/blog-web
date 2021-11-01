@@ -73,13 +73,10 @@
     padding: 150px 0;
     width: 264px;
 
-    .menu {
-      user-select: none;
-    }
-
     .menuFixed {
       position: fixed;
       top: 221px;
+      user-select: none;
 
       ol {
         padding-inline-start: 1rem;
