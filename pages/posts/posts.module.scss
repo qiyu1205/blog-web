@@ -80,6 +80,10 @@
     .menuFixed {
       position: fixed;
       top: 221px;
+
+      ol {
+        padding-inline-start: 1rem;
+      }
     }
   }
 }

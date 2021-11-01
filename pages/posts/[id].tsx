@@ -73,13 +73,13 @@ export default class Post extends PureComponent<Props, State> {
   componentDidMount() {
     // init tocbot
     tocbot.init({
-      tocSelector: '.postMenu',
-      contentSelector: '.postDetailContent',
+      tocSelector: '.post-menu',
+      contentSelector: '.post-detail-content',
       headingSelector: 'h1, h2, h3',
       hasInnerContainers: true,
     })
 
-    window.addEventListener('scroll', throttle(this.handleScroll, 200))
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   handleScroll = () => {
@@ -99,7 +99,7 @@ export default class Post extends PureComponent<Props, State> {
         </Head>
         <section className={styles.postWrap}>
           <aside ref={this.menuRef} className={styles.catelogWrap}>
-            <div  className={`${styles.menu} postMenu ${this.state.menuFixed ? styles.menuFixed : ''}`} ></div>
+            <div  className={`${styles.menu} post-menu ${styles.menuFixed}`} ></div>
           </aside>
           <article className={`${styles.content}`} >
             <h1 className={styles.postTitle}>{postData.title}</h1>
@@ -111,7 +111,7 @@ export default class Post extends PureComponent<Props, State> {
               remarkPlugins={[gfm]}
               rehypePlugins={[rehypeRaw]}
               components={customMarkdownComponents}
-              className="postDetailContent"
+              className="post-detail-content"
             >
               {removeEmbededTag(postData.contentHtml)}
             </ReactMarkdown>
