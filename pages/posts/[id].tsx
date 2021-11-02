@@ -11,7 +11,6 @@ import Date from '../../components/date'
 import styles from './posts.module.scss'
 import tocbot from 'tocbot'
 import React, { PureComponent } from 'react'
-import { throttle } from 'lodash'
 
 
 interface Props {
