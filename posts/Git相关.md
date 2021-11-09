@@ -1,8 +1,8 @@
 ---
 title: 'Git 相关'
 date: '2017-12-26'
-tags: 'Git'
-quote: '一般单元测试需要 一个测试框架（mocha）、一个测试运行器（karma）、一个断言库（chai）、一个单元测试工具库（Vue Test Uitls）和一个用于测试的浏览器环境...'
+tags: 'Git, Gitflow'
+quote: 'Gitflow 工作流定义了一个围绕项目发布的严格分支模型。虽然比功能分支工作流复杂几分，但提供了用于一个健壮的用于管理大型项目的框架。'
 titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
 ---
 
@@ -44,7 +44,7 @@ titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
 
 # 分支作用
 
-`master` 负责发版,一般用于线上环境
+`master` 负责发版，一般用于线上环境
 
 新功能开发完会合并到 `develop` 分支上
 
@@ -54,9 +54,7 @@ titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
 
 开发完成合并回 `develop` 分支
 
-[Git 工作流](https://github.com/oldratlee/translations/blob/master/git-workflows-and-tutorials/README.md)
-
-[Gitflow 工作流](https://github.com/oldratlee/translations/blob/master/git-workflows-and-tutorials/workflow-gitflow.md)
+在项目中一般使用 [Gitflow 工作流](https://github.com/oldratlee/translations/blob/master/git-workflows-and-tutorials/workflow-gitflow.md)
 
 modules 模块：包含业务逻辑，与页面一一对应。由一个或多个 component 组成
 
@@ -97,16 +95,3 @@ scope 用于说明 commit 影响的范围
 ## subject
 
 subject 是 commit 目的的简短描述，不超过50个字符。
-
-
-# 提交 MR 需要注意的地方
-
-备注信息描述完整，清晰
-
-代码不要过多（一般20行内）
-
-不要卷入其他不相关的改动（如代码格式化）
-
-去除日志及调试 log
-
-判断是否需要合并 master（git diff 或使用其他工具对比）

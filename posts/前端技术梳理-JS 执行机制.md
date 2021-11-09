@@ -1,6 +1,6 @@
 ---
 title: '前端技术梳理-JS 执行机制'
-date: '2021-10-01'
+date: '2021-10-02'
 tags: 'Event Loop'
 quote: 'JavaScript 作为浏览器的脚本语言，主要是实现用户与浏览器的交互以及操作 DOM； 这决定了它只能是单线程...'
 titlePic: 'http://images.qiyu1205.top/post-road.jpg'
@@ -16,13 +16,13 @@ titlePic: 'http://images.qiyu1205.top/post-road.jpg'
 
 在浏览器中，打开一个tab就是创建了一个进程.
 
-**线程**：是cpu调度的最小单位；
+**线程**：是 CPU 调度的最小单位；
 
 **一个进程中可以有多个线程**，如渲染线程、JS 引擎线程、HTTP 请求线程等等。
 
-## 单线程
+## JS 单线程带来的好处
 
-JS 单线程带来的好处： 节约内存、节约上下文切换时间、没有锁的问题。
+节约内存、节约上下文切换时间、没有锁的问题。
 
 ## Event Loop
 

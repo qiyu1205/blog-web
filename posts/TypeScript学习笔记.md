@@ -2,7 +2,7 @@
 title: 'TypeScript学习笔记'
 date: '2021-10-01'
 tags: '代理'
-quote: '一些外部服务的接口会向我们自己的应用提供的接口发出请求，或是必须是线上服务器调用比如微信的 `jssdk` ，但是我们开发都是在本地完成...'
+quote: '什么是 TypeScript， 官网的描述是 “添加了类型系统的 JavaScript”，它提供了一套静态检测机制, 可以帮助我们在编译时就发现错误...'
 titlePic: 'http://images.qiyu1205.top/post-home.jpg'
 ---
 
