@@ -12,7 +12,6 @@ interface Props{
 interface State{}
 
 export default class Home extends PureComponent<Props, State> {
-  componentDidMount() {}
 
   render() {
     return (
