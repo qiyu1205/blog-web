@@ -33,9 +33,6 @@
   display: flex;
 
   .content {
-    flex: 1;
-    width: 100%;
-    min-width: 0px;
   
     .postTitle {
       margin-bottom: 56px;
@@ -120,4 +117,12 @@
   line-height: 1.6em;
   color: #00965e;
   background-color: #e5f4ef;
+}
+
+@media (max-width: 768px) {
+  .postWrap {
+    .catelogWrap {
+      display: none;
+    }
+  }
 }
