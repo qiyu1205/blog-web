@@ -4,10 +4,10 @@ date: '2021-10-03'
 tags: 'web, 梳理'
 quote: 'xxxxxxxxxxxx'
 titlePic: 'http://images.qiyu1205.top/post-planets.jpg'
+
 ---
 
 什么是 MVVM ？
-
 
 Virtual DOM
 
@@ -114,6 +114,28 @@ v-if 只有在值为 true 时才渲染，并且切换条件时会触发销毁/�
 data 为什么是一个函数返回对象？
 
 组件复用时所有组件实例都会共享 `data`，如果 `data` 是对象的话，就会造成一个组件修改 `data` 以后会影响到其他所有组件，所以需要将 `data` 写成函数，每次用到就调用一次函数获得新的数据。
+
+对 Vue2 和 Vue3 响应式变化的理解
+
+Vue3 使用 Proxy API 代替了 Vue2 中的 defineProperty API,
+
+defineProperty API 的局限性在于它只能针对单例属性做监听。
+
+Proxy API 可以监听对象下所有属性的操作，这会带来很大的性能提升。
+
+nextTick 原理
+
+nextTick 用于获取数据更新后的 DOM 
+
+Vue 在更新 DOM 时是异步执行的。只要侦听到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个 watcher 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。然后，在下一个的事件循环“tick”中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部对异步队列尝试使用原生的 Promise.then、MutationObserver 和 setImmediate，如果执行环境不支持，则会采用 setTimeout(fn, 0) 代替。
+
+v-model 原理
+
+本质上是语法糖，父组件上使用`v-model`, 子组件默认会利用名为 `value` 的 `prop` 和名为 `input` 的事件，当然像`select`表单会以其他默认事件的形式存在。
+
+自定义指令
+
+`$set` 使用场景
 
 ## React
 
