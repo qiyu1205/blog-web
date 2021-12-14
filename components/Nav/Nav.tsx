@@ -20,7 +20,8 @@ const NavigatorList = () => (
         <span>博客</span>
       </a>
     </Link>
-    <Link  href='/laboratory'>
+    {/* <Link  href='/laboratory'> */}
+    <Link  href='/'>
       <a className={styles.navItem}>
         <ApiOutlined />
         <span>实验室</span>
