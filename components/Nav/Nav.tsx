@@ -44,10 +44,12 @@ const NavigatorList = () => (
 const Nav = ({ avatar, user }: Props) => (
   <header className={styles.header}>
     <div className={styles.nav}>
-      <div className={styles.logo}>
-        <img className={styles.avatar} src={avatar} alt='logo' />
-        <span className={styles.userName}>{`${user}`}</span>
-      </div>
+      <Link href='/'>
+        <a className={styles.logo}>
+          <img className={styles.avatar} src={avatar} alt='logo' />
+          <span className={styles.userName}>{`${user}`}</span>
+        </a>
+      </Link>
       <NavigatorList />
     </div>
   </header>
