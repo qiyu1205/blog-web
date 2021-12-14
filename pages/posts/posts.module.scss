@@ -33,6 +33,7 @@
   display: flex;
 
   .content {
+    overflow: auto;
   
     .postTitle {
       margin-bottom: 56px;
@@ -75,7 +76,7 @@
       background-color: rgb(40, 44, 52) !important;
     }
   
-    code {
+    code, pre {
       font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
   
@@ -123,6 +124,9 @@
   .postWrap {
     .catelogWrap {
       display: none;
+    }
+    .content {
+      width: calc(100% - 32px);
     }
   }
 }
