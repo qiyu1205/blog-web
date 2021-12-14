@@ -74,6 +74,7 @@
       padding: 1rem !important;
       line-height: 1.5em;
       background-color: rgb(40, 44, 52) !important;
+      overflow: auto;
     }
   
     code, pre {
@@ -89,6 +90,14 @@
       background-color: #ededeb;
       border-radius: .25rem;
       padding: 0 .25rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    blockquote {
+      overflow: auto;
     }
   }
 
@@ -124,9 +133,6 @@
   .postWrap {
     .catelogWrap {
       display: none;
-    }
-    .content {
-      width: calc(100% - 32px);
     }
   }
 }
