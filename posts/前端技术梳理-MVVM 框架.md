@@ -17,7 +17,7 @@ HTML:
 
 ```html
 <ul class='list'>
-    <li>1</li>
+  <li>1</li>
 </ul>
 ```
 
@@ -25,14 +25,14 @@ HTML:
 
 ```js
 const ul = {
-    tag: 'ul',
-    props: {
-        class: 'list'
-    },
-    children: [{
-        tag: 'li',
-        children: 1
-    }],
+  tag: 'ul',
+  props: {
+    class: 'list'
+  },
+  children: [{
+    tag: 'li',
+    children: 1
+  }],
 }
 ```
 
