@@ -71,9 +71,9 @@ Markdown是一种超轻量级的标记语言，常用的标记符号不超过十
 
 写法： \!\[描述\]\(图片链接地址\)
 
-示例：`![logo](http://images.qiyu1205.top/image.jpg)`
+示例：`![logo](http://images.qiyu1205.top/POST/avatar.JPG)`
 
-显示：![logo](http://images.qiyu1205.top/image.jpg)
+显示：![logo](http://images.qiyu1205.top/POST/avatar.JPG)
 
 ### 内嵌代码
 
