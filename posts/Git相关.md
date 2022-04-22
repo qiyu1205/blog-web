@@ -6,6 +6,35 @@ quote: 'Gitflow 工作流定义了一个围绕项目发布的严格分支模型�
 titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
 ---
 
+# 基本配置
+## 配置用户信息
+```bash
+    git config --global user.name 'yourname'
+    git config --global user.email 'youremail'
+```
+## 查看用户信息
+```bash
+    git config --list --global  # 默认为全局，可以省略--global
+```
+
+# 仓库的建立和关联
+## 建立本地仓库并关联到远程
+```bash
+    mkdir repo # 新建仓库目录
+    cd repo # 进入到仓库目录
+    git init # 初始化仓库，会在当前目录生成.git文件
+    git remote add <repo-local-name> <repo-url> # 关联远程仓库
+```
+## 克隆远程仓库
+```bash
+    git clone <repo-url>
+```
+
+# 基本概念
+Git本地有四个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)、git仓库(Remote Directory)。
+文件在这四个区域之间的转换关系如下
+![](http://images.qiyu1205.top/POST/POST_GIT.png)
+
 # 常见Git命令
 
 `git branck <branckName>`   新建分支
