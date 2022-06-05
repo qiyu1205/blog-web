@@ -1,5 +1,5 @@
 export const userInfo = {
-  avatar: 'http://images.qiyu1205.top/avatar.JPG',
+  avatar: 'http://images.qiyu1205.top/POST/avatar.JPG',
   userName: 'QiyU\'s blog',
 };
 
