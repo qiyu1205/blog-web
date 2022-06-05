@@ -3,7 +3,7 @@ title: 'Git 相关'
 date: '2017-12-26'
 tags: 'Git, Gitflow'
 quote: 'Gitflow 工作流定义了一个围绕项目发布的严格分支模型。虽然比功能分支工作流复杂几分，但提供了用于一个健壮的用于管理大型项目的框架。'
-titlePic: 'http://images.qiyu1205.top/post-planet.jpg'
+titlePic: 'http://images.qiyu1205.top/POST_BANNER/post-planet.jpg'
 ---
 
 # 基本配置

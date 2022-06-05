@@ -3,7 +3,7 @@ title: 'TypeScript学习笔记'
 date: '2021-10-01'
 tags: '代理'
 quote: '什么是 TypeScript， 官网的描述是 “添加了类型系统的 JavaScript”，它提供了一套静态检测机制, 可以帮助我们在编译时就发现错误...'
-titlePic: 'http://images.qiyu1205.top/post-home.jpg'
+titlePic: 'http://images.qiyu1205.top/POST_BANNER/post-home.jpg'
 ---
 
 # TypeScript

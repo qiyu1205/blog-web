@@ -3,7 +3,7 @@ title: '前端技术梳理-JS 执行机制'
 date: '2021-10-02'
 tags: 'Event Loop'
 quote: 'JavaScript 作为浏览器的脚本语言，主要是实现用户与浏览器的交互以及操作 DOM； 这决定了它只能是单线程...'
-titlePic: 'http://images.qiyu1205.top/post-road.jpg'
+titlePic: 'http://images.qiyu1205.top/POST_BANNER/post-road.jpg'
 ---
 
 # JS执行机制
